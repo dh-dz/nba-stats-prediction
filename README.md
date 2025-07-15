@@ -1,6 +1,2 @@
 # nba-stats-prediction
-The goal is to use historical NBA game statistics data to build predictive models on the game statistics.
-
-Use data from https://github.com/Brescou/NBA-dataset-stats-player-team
-
-To run the notebooks, git clone the repo above, and put the folder NBA-dataset-stats-player-team in the same folder of the notebooks
+The goal is to use historical NBA game statistics data (from https://www.kaggle.com/datasets/nathanlauga/nba-games, games.csv and teams.csv) and corresponding sports betting odds data (before each game, from https://www.kaggle.com/datasets/christophertreasure/nba-odds-data, oddsData.csv) to build predictive models on the game results: which team wins, score spread, score sum, etc. and design betting strategies accordingly.
