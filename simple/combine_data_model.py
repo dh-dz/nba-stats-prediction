@@ -37,12 +37,7 @@ rolling = (
     .apply(lambda df: df.sort_values('date').rolling(window=5, on='date').mean())
     .reset_index()
 )
-#rolling = long_stats.groupby('team_id').rolling(window=5, on='date').mean()
-#rolling = rolling.reset_index().drop(columns=['level_1'])
 
-#rolling = long_stats.groupby('team_id').rolling(window=5, on='date').mean().reset_index()
-
-# Rename rolling stat columns
 rolling = rolling.rename(columns={
     'FG_PCT': 'FG_PCT_avg',
     'FT_PCT': 'FT_PCT_avg',
@@ -51,19 +46,6 @@ rolling = rolling.rename(columns={
     'REB': 'REB_avg',
     'PTS': 'PTS_avg'
 })
-
-'''
-rolling = rolling.rename(columns={
-    'FG_PCT': 'FG_PCT_avg', 'FT_PCT': 'FT_PCT_avg', 'FG3_PCT': 'FG3_PCT_avg',
-    'AST': 'AST_avg', 'REB': 'REB_avg', 'PTS': 'PTS_avg'
-}).drop(columns='level_1')
-rolling = (
-    long_stats
-    .groupby('team_id', group_keys=False)
-    .apply(lambda df: df.sort_values('date').rolling(window=5, on='date').mean())
-    .reset_index()
-)
-'''
 
 # Merge rolling averages back to merged_df
 merged_df = merged_df.merge(rolling, left_on=['date', 'teamA_id'], right_on=['date', 'team_id'], how='left')
