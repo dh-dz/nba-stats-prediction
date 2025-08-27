@@ -1,4 +1,4 @@
-# nba-stats-prediction
+# nba-stats-prediction-and-betting
 Profitable and consistent betting strategy on NBA game moneyline, powered by a machine learning model to predict the game score distribution.
 
 Main results are in model/results.
