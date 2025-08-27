@@ -1,5 +1,5 @@
 # NBA Stats Prediction And Betting
-Profitable betting strategy on NBA game moneyline, powered by a machine learning model to predict the game score distribution.
+Profitable betting strategy on NBA game moneyline, powered by a machine learning model to predict the game score spread distribution.
 
 To train the model, run the Jupyter notebook "model/train.ipynb". Then the results can be seen by running the Jupyter notebook "model/results.ipynb"
 
