@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.ensemble import RandomForestRegressor
 
-combined_data = pd.read_csv("merged_data.csv")
+combined_data = pd.read_csv("../data/data_files/merged_data.csv")
 
 numeric_cols = ['FG_PCT', 'FT_PCT', 'FG3_PCT', 'AST', 'REB']
 
@@ -55,7 +55,7 @@ df['score_diff'] = df['teamA_score'] - df['teamB_score']
 
 feature_cols = ['fg_pct_diff', 'ft_pct_diff', 'fg3_pct_diff', 'ast_diff', 'reb_diff', 'moneyline_diff']
 df_model = df.dropna(subset=feature_cols + ['score_diff']).copy()
-df_model.to_csv("merged_data_features.csv", index=False)
+df_model.to_csv("../data/data_files/merged_data_features.csv", index=False)
 
 # Feature columns and target
 feature_cols = ['fg_pct_diff', 'ft_pct_diff', 'fg3_pct_diff', 'ast_diff', 'reb_diff', 'moneyline_diff','teamA_home']

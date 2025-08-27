@@ -1,6 +1,6 @@
 import pandas as pd
 # Load the dataset
-df_model = pd.read_csv("merged_data_features.csv", parse_dates=["date"])
+df_model = pd.read_csv("../data/data_files/merged_data_features.csv", parse_dates=["date"])
 
 # Choose a time window
 tiredness_window_days = 5
@@ -109,4 +109,4 @@ df_model = df_model.dropna(subset=feature_cols + [target_col, 'spread'])
 
 df_model = df_model[(df_model['season'] >= 2018) & (df_model['season'] <= 2021)]
 # Save filtered dataset
-df_model.to_csv("data_advanced_features.csv", index=False)
+df_model.to_csv("../data/data_files/ndata_advanced_features.csv", index=False)
