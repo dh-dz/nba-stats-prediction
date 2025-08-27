@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load data
-df = pd.read_csv("oddsData.csv")
+df = pd.read_csv("data_files/oddsData.csv")
 
 # Create a consistent game_id: sorted teams + date
 df['team_pair'] = df[['team', 'opponent']].apply(lambda x: tuple(sorted(x)), axis=1)
@@ -35,13 +35,12 @@ cleaned_df = df[[
     'total', 'spread', 'secondHalfTotal'
 ]]
 
-# Optional save or display
-cleaned_df.to_csv("cleaned_odds_data.csv", index=False)
+cleaned_df.to_csv("data_files/cleaned_odds_data.csv", index=False)
 
 # Load datasets
-odds_df = pd.read_csv("cleaned_odds_data.csv")
-games_df = pd.read_csv("games.csv")
-teams_df = pd.read_csv("teams.csv")
+odds_df = pd.read_csv("data_files/cleaned_odds_data.csv")
+games_df = pd.read_csv("data_files/games.csv")
+teams_df = pd.read_csv("data_files/teams.csv")
 
 # Ensure SEASON is numeric
 odds_df['season'] = odds_df['season'].astype(int)
@@ -112,4 +111,4 @@ for col in stats:
 merged = pd.concat([merge_home, merge_away], ignore_index=True)
 merged = merged.sort_values('date').reset_index(drop=True)
 
-merged.to_csv("merged_data.csv", index=False)
+merged.to_csv("data_files/merged_data.csv", index=False)
