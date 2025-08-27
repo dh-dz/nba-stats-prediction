@@ -1,5 +1,5 @@
 # nba-stats-prediction
-Betting strategy on NBA game moneyline, powered by a machine learning model to predict the game score distribution.
+Profitable and consistent betting strategy on NBA game moneyline, powered by a machine learning model to predict the game score distribution.
 
 Main results are in model/results.
 Orginal data: historical NBA game statistics data (from https://www.kaggle.com/datasets/nathanlauga/nba-games, games.csv and teams.csv) and corresponding sports betting odds data (before each game, from https://www.kaggle.com/datasets/christophertreasure/nba-odds-data, oddsData.csv)
