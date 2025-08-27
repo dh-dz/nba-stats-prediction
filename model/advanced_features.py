@@ -109,4 +109,4 @@ df_model = df_model.dropna(subset=feature_cols + [target_col, 'spread'])
 
 df_model = df_model[(df_model['season'] >= 2018) & (df_model['season'] <= 2021)]
 # Save filtered dataset
-df_model.to_csv("../data/data_files/ndata_advanced_features.csv", index=False)
+df_model.to_csv("../data/data_files/data_advanced_features.csv", index=False)
