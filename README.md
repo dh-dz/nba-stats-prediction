@@ -6,3 +6,5 @@ The main idea is to use recent game statistics (prior to a game) difference betw
 To train the model, run the Jupyter notebook "model/train.ipynb". Then the results can be seen by running the Jupyter notebook "model/results.ipynb"
 
 All the data csv files are stored in "data/data_files", including original data: historical NBA game statistics data (from https://www.kaggle.com/datasets/nathanlauga/nba-games, games.csv and teams.csv) and corresponding sports betting odds data (before each game, from https://www.kaggle.com/datasets/christophertreasure/nba-odds-data, oddsData.csv). Other data files are those stored middle steps with data preprocessing, feature engineering and the backtesting results.
+
+NGboost is required to be installed to run the training.
