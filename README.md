@@ -22,7 +22,7 @@ This project leverages recent NBA game statistics to model the score spread dist
 
 ## Usage
 
-- **Training**: Run the Jupyter notebook [`model/train.ipynb`](model/train.ipynb) to train the NGBoost model.  
+- **Training**: Run the Jupyter notebook [`model/training.ipynb`](model/training.ipynb) to train the NGBoost model.  
 - **Results & Backtesting**: Run [`model/results.ipynb`](model/results.ipynb) to visualize results and evaluate backtested performance.
 
 ## Data
