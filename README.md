@@ -7,15 +7,18 @@ A machine learning–driven framework for predicting NBA game outcomes and desig
 This project leverages recent NBA game statistics to model the score spread distribution and derive betting decisions. The core workflow is:
 
 1. **Feature Engineering**  
-   For each upcoming game, compute the difference in recent statistics between **Team A** and **Team B** as the primary features.
+   For each upcoming game, the primary features include the difference in recent performance statistics between **Team A** and **Team B**, as well as the pre-game betting odds. Additional factors such as **home-court advantage**, **team fatigue (tiredness)**, and **head-to-head performance in recent matchups** are also incorporated.
 
-2. **Rolling Training & Testing**  
+1. **Feature Engineering**  
+   For each upcoming game, primary features are the difference in recent game statistics between **Team A** and **Team B** and the betting odds data before the game. We also consider home court advantage, team tiredness and statistics difference in recent games against the specific opponent. 
+   
+3. **Rolling Training & Testing**  
    Use a rolling window setup with reasonable training and test lengths to better capture temporal dynamics.
 
-3. **Modeling with NGBoost**  
+4. **Modeling with NGBoost**  
    Train an [NGBoost](https://stanfordmlgroup.github.io/projects/ngboost/) model to predict the probability distribution of the game score spread.
 
-4. **Betting Strategy**  
+5. **Betting Strategy**  
    Compare the model-derived win probabilities with sportsbook moneyline odds.  
    - Calculate the **adjusted expected value (adjusted EV)** for each bet.  
    - Choose to bet on Team A, Team B, or take the **"No Bet"** option.
